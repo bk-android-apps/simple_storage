@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33CCFF"
+    android:orientation="vertical" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/spartan" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:text="@string/pref_title"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/EditTextMessageInput_c"
+        android:layout_width="wrap_content"
+        android:layout_height="150dip"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/saveSQLite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/EditTextMessageInput_c"
+        android:layout_toRightOf="@+id/EditTextMessageInput_c"
+        android:onClick="saveMessage"
+        android:text="@string/save"
+        android:width="80dp" />
+
+    <Button
+        android:id="@+id/cancelSQLite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/EditTextMessageInput_c"
+        android:layout_alignBottom="@+id/EditTextMessageInput_c"
+        android:layout_toRightOf="@+id/EditTextMessageInput_c"
+        android:onClick="cancelSQliteActivity"
+        android:text="@string/cancel"
+        android:width="80dp" />
+
+    <TextView
+        android:id="@+id/TextViewDescription_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="32dp"
+        android:text="@string/message"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33CCFF"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/spartan" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="@string/pref_title"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/TextViewBookname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/book_name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/EditTextBookInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:hint="@string/book_author_hint"
+        android:maxLength="70" />
+
+    <TextView
+        android:id="@+id/TextViewAuthorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/book_author"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/EditTextAuthorInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:ems="10"
+        android:hint="@string/book_author_hint"
+        android:maxLength="70" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/TextViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/description"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/EditTextDescriptionInput"
+            android:layout_width="wrap_content"
+            android:layout_height="150dip"
+            android:layout_marginLeft="5dp"
+            android:ems="10"
+            android:hint="@string/description_hint"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/cancelPreferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/EditTextDescriptionInput"
+            android:text="@string/cancel"
+            android:onClick="cancelPreferences"
+            android:width="80dp" />
+
+        <Button
+            android:id="@+id/savePreferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/cancelPreferences"
+            android:layout_centerVertical="true"
+            android:text="@string/save"
+            android:onClick="savePreferences"
+            android:width="80dp" />
+    </RelativeLayout>
+
+</LinearLayout>
